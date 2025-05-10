@@ -15,5 +15,6 @@ spec:
       containers:
         - name: hello
           image: hello-minikube
+          imagePullPolicy: Never
           ports:
             - containerPort: 8080

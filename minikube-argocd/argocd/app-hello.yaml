@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hello-minikube
+  namespace: argocd
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: hello-minikube/kubernetes
+    repoURL: https://github.com/hiromu-kon/kubernetes-practice.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
