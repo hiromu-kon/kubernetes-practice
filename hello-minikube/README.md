@@ -2,7 +2,6 @@
 
 This is a simple Go web server deployed on Kubernetes using Minikube.
 
-
 ## 🚀 Usage
 
 ```bash
@@ -17,6 +16,9 @@ kubectl apply -f kubernetes/
 
 # Access the service in your browser
 minikube service hello-service
+
+# (Optional) Port-forward the service to access it via http://localhost:8080
+kubectl port-forward svc/hello-service 8080:80
 ```
 
 ## 🧹 Clean Up

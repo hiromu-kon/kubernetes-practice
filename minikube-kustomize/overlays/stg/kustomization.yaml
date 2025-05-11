@@ -1,0 +1,7 @@
+namePrefix: stg-
+
+resources:
+  - ../../base
+
+patchesStrategicMerge:
+  - patch-deployment.yaml
